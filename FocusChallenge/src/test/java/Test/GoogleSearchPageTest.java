@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import Pages.FocusPageObject;
 import Pages.GoogleSearchPageObject;
 
 public class GoogleSearchPageTest {
@@ -27,15 +28,17 @@ public class GoogleSearchPageTest {
 		driver = new ChromeDriver();
 		
 		GoogleSearchPageObject searchPageObj = new GoogleSearchPageObject(driver);
+		FocusPageObject focusObject= new FocusPageObject(driver);
 	    JavascriptExecutor jse = (JavascriptExecutor)driver;
 		
 				
 		searchPageObj.setTextInSearchBox("Focus Services");		
 		searchPageObj.clickSearchButton();		
-		searchPageObj.closePopup();
+		focusObject.closePopup();
+		focusObject.verifyButton();
 		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		searchPageObj.clickLocationsButton();		
-		searchPageObj.linkValidation();
+		focusObject.clickLocationsButton();		
+		focusObject.linkValidation();
 		
 		
 		

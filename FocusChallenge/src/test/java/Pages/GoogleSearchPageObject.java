@@ -43,25 +43,5 @@ public class GoogleSearchPageObject {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}	
 	
-	public void closePopup() {
-	driver.get("https://www.focusservices.com/");
-	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
-	driver.findElement(popup_close).click();	
-	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	
-	}
-	public void clickLocationsButton() {		
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.findElement(button_locations).click();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	}
-	public void linkValidation() {
-		String actualTitle = driver.findElement(northAmerica_link).getText();
-		String expectedTitle = "NORTH AMERICA";
-		Assert.assertEquals(expectedTitle, actualTitle);
 		
-		System.out.println("AssertCompleted");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	}
-	
 }
