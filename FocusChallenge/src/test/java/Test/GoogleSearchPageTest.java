@@ -39,7 +39,7 @@ public class GoogleSearchPageTest {
 		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		focusObject.clickLocationsButton();		
 		focusObject.linkValidation();
-		
+		focusObject.clickCentralAmerica();
 		
 		
 	}
