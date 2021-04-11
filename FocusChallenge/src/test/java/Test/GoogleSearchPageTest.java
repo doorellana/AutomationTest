@@ -36,8 +36,7 @@ public class GoogleSearchPageTest {
 		searchPageObj.setTextInSearchBox("Focus Services");		
 		searchPageObj.clickSearchButton();
 		searchPageObj.verifyFocusLink();
-		focusObject.getFocusPage();					
-		//focusObject.closePopup();		
+		focusObject.getFocusPage();			
 		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		focusObject.verifyButton();		
 		focusObject.clickLocationsButton();		

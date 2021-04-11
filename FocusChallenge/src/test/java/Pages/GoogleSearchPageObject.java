@@ -29,22 +29,23 @@ public class GoogleSearchPageObject {
 		
 	}
 	
-
+// Method to get to the google main page and enter a text to search
 	public void setTextInSearchBox(String text) {
-		driver.get("https://google.com");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.findElement(textbox_search).sendKeys(text);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.get("https://google.com");	
+		driver.findElement(textbox_search).sendKeys(text);		
 		driver.manage().window().maximize();
 	}
 	
+	//Method to click the search button
 	public void clickSearchButton() {
 		driver.findElement(button_search).sendKeys(Keys.RETURN);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	}	
+	}
+	
+	//Method to verify if the link 'https://www.focusservices.com/' exist in the google search.
 	public void verifyFocusLink() {
 		String linkName = driver.findElement(By.xpath("//a[@href='https://www.focusservices.com/']")).getText();
-		System.out.println("El siguiente Link se muestra en la busqueda"+ linkName);
+		System.out.println("El siguiente Link se muestra en la busqueda " + linkName);
 	}
 		
 }
