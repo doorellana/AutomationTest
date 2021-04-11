@@ -33,14 +33,16 @@ public class GoogleSearchPageTest {
 		
 				
 		searchPageObj.setTextInSearchBox("Focus Services");		
-		searchPageObj.clickSearchButton();		
+		searchPageObj.clickSearchButton();
+		focusObject.getFocusPage();		
 		focusObject.closePopup();
-		focusObject.verifyButton();
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		focusObject.verifyButton();		
 		focusObject.clickLocationsButton();		
 		focusObject.linkValidation();
 		focusObject.clickCentralAmerica();
-		
+		focusObject.verifyTitle();
 		
 	}
 
