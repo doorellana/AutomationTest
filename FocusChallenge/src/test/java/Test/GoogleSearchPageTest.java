@@ -1,11 +1,14 @@
 package Test;
 
+import java.awt.Robot;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Pages.FocusPageObject;
@@ -29,21 +32,20 @@ public class GoogleSearchPageTest {
 		
 		GoogleSearchPageObject searchPageObj = new GoogleSearchPageObject(driver);
 		FocusPageObject focusObject= new FocusPageObject(driver);
-	    JavascriptExecutor jse = (JavascriptExecutor)driver;
-		
-				
+	    JavascriptExecutor jse = (JavascriptExecutor)driver;					
 		searchPageObj.setTextInSearchBox("Focus Services");		
 		searchPageObj.clickSearchButton();
-		focusObject.getFocusPage();		
-		focusObject.closePopup();
-		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+		searchPageObj.verifyFocusLink();
+		focusObject.getFocusPage();					
+		//focusObject.closePopup();		
 		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		focusObject.verifyButton();		
 		focusObject.clickLocationsButton();		
 		focusObject.linkValidation();
 		focusObject.clickCentralAmerica();
 		focusObject.verifyTitle();
-		
+		focusObject.clickAsiaLocation();
+		focusObject.verifyAsiaLocationText();
 	}
 
 }

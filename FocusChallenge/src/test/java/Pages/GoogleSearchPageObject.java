@@ -42,6 +42,9 @@ public class GoogleSearchPageObject {
 		driver.findElement(button_search).sendKeys(Keys.RETURN);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}	
-	
+	public void verifyFocusLink() {
+		String linkName = driver.findElement(By.xpath("//a[@href='https://www.focusservices.com/']")).getText();
+		System.out.println("El siguiente Link se muestra en la busqueda"+ linkName);
+	}
 		
 }

@@ -5,9 +5,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.junit.Assert;
+import java.awt.Robot;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -15,11 +17,15 @@ import java.util.concurrent.TimeUnit;
 public class FocusPageObject {
 	WebDriver driver = null;
 	
+	
 	By popup_close= By.xpath("//*[@id=\"spu-7930\"]/div/a");	
 	By button_locations= By.xpath("//*[@id=\"menu-item-4726\"]/a");
-	By northAmerica_link = By.xpath("//*[@id=\"av-tab-section-1\"]/div/div[1]/a[1]");
+	By northAmericaLocation_link = By.xpath("//a[@href='#north-america']");
 	//By nowHiring = By.xpath("//*[@id=\"text-4\"]/div/p/a/span");
-	By centralAmerica_link = By.xpath("//*[@id=\"av-tab-section-1\"]/div/div[1]/a[2]");
+	By centralAmericaLocation_link = By.xpath("//a[@href='#central-america']");
+	By asiaLocation_link = By.xpath("//a[@href='#asia']");
+	
+	
 	
 	public FocusPageObject(WebDriver driver) {
 		this.driver = driver;
@@ -28,8 +34,9 @@ public class FocusPageObject {
 	
 	public void getFocusPage() {
 		driver.get("https://www.focusservices.com/");	
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		
 		}
+	
 	public void closePopup() {		
 		
 		driver.findElement(popup_close).click();			
@@ -37,6 +44,7 @@ public class FocusPageObject {
 		}
 	
 	public void verifyButton()	{
+		
 		
 		List<WebElement> dynamicElement = driver.findElements(By.xpath("//a[@href='https://www.focusservices.com/apply/']"));
 		if(dynamicElement.size() != 0){
@@ -51,23 +59,23 @@ public class FocusPageObject {
 	}
 	
 		public void clickLocationsButton() {		
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			
 			driver.findElement(button_locations).click();
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			
 		}
 		
 		public void linkValidation() {
-			String actualTitle = driver.findElement(northAmerica_link).getText();
+			String actualTitle = driver.findElement(northAmericaLocation_link).getText();
 			String expectedTitle = "NORTH AMERICA";
 			Assert.assertEquals(expectedTitle, actualTitle);
 			
 			System.out.println("AssertCompleted the link to north america is available");
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			
 		}
 		
 		public void clickCentralAmerica() {
-			driver.findElement(centralAmerica_link).click();
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			driver.findElement(centralAmericaLocation_link).click();
+			
 		}
 		
 		public void verifyTitle()	{
@@ -80,9 +88,23 @@ public class FocusPageObject {
 			}else {
 				System.out.println("Value does not match");
 			}
-			
-			
-			
+						
+		}
+		
+		public void clickAsiaLocation() {
+			driver.findElement(asiaLocation_link).click();
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		}
+		
+		public void verifyAsiaLocationText() {
+			String retrieveText = driver.findElement(By.xpath("//*[@id=\"av-tab-section-1\"]/div/div[2]/div[3]/div/div/div[2]/section/div/h3/b")).getText();
+
+			if(retrieveText.equals("Bacolod City, Philippines")) {
+			//User defined message on console
+			System.out.println("The text Bacolod City, Philippines is being displayed properly");
+			}else {
+				System.out.println("The text Bacolod City, Philippines is not being displayed in the page");
+			}
 		}
 		
 }
