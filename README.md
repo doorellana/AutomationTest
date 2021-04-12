@@ -1,6 +1,6 @@
 # Automation Challenge
 
-Automation Challenge Hi everyone I hope that everything is goin well!!!! To test this project you will need to have a couple of tools in your system... :(
+Hi everyone I hope that everything is goin well!!!! To test this project you will need to have a couple of tools in your system... :(
 
 1- You need to dowload and install the IDE eclipse: https://www.eclipse.org/downloads/
 
@@ -10,9 +10,9 @@ Automation Challenge Hi everyone I hope that everything is goin well!!!! To test
 
 ![image](https://user-images.githubusercontent.com/59879362/114331901-4aaca380-9b02-11eb-9e65-601245bb6772.png)
 
-4- Dowload the Project from GitHub.
+4- Dowload the Automation Test Project from GitHub.
 
-5- Import the project as "Existing maven project" in the ecplise IDE.
+5- Import the project as "Existing Maven Projects" in the ecplise IDE.
 
 6- Now add the Selenium WebDriver into java Build Path, steps:
 
