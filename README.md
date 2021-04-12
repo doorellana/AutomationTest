@@ -18,9 +18,9 @@ Hi everyone I hope that everything is goin well!!!! To test this project you wil
 
     -Right-click on "Focus Challenge Project" and select Properties.
     -On the Properties dialog, click on "Java Build Path".
-    -Click on the Libraries tab, and then
+    -Click on the Libraries tab, then
     -Click on "Add External JARs.
-    -Select all the Following Jars that you dowload in the third step:
+    -Select all the Following Jars that you download in the third step:
         -client-combined-3.141.59.jar
         -client-combined-3.141.59-sources.jar
         
