@@ -1,7 +1,7 @@
 # AutomationTest
 Automation Challenge
 
-\Automation Challenge Hi everyone I hope that everything is goin well!!!! To test this project you will need to have a couple of tools in your system... :(
+Automation Challenge Hi everyone I hope that everything is goin well!!!! To test this project you will need to have a couple of tools in your system... :(
 
 1- You need to dowload and install the IDE eclipse: https://www.eclipse.org/downloads/
 
