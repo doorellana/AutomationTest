@@ -10,7 +10,7 @@ Hi everyone I hope that everything is goin well!!!! To test this project you wil
 
 ![image](https://user-images.githubusercontent.com/59879362/114331901-4aaca380-9b02-11eb-9e65-601245bb6772.png)
 
-4- Dowload the Automation Test Project from GitHub.
+4- Dowload the "AutomationTest" Project from GitHub as .zip file.
 
 5- Import the project as "Existing Maven Projects" in the ecplise IDE.
 
