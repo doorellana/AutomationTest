@@ -25,12 +25,13 @@ Automation Challenge
         -client-combined-3.141.59.jar
         -client-combined-3.141.59-sources.jar
         
-        All the following are inside the "libs" folder.
+       All the following are inside the "libs" folder:
         -byte-buddy-1.8.15.jar
         -commons-exec-1.3.jar
         -guava-25.0-jre.jar
         -okhttp-3.11.0.jar
         -okio-1.14.0.jar
      -Once done, click "Apply and Close" button.
+     
 7- Finally the end!!!!! Now just run the project and hope that everything is going to work as expected....     
  
