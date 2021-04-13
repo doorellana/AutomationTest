@@ -1,8 +1,10 @@
 # Automation Challenge
 
-Hi everyone I hope that everything is goin well!!!! To test this project you will need to have a couple of tools in your system to be able to run the project, use the following steps to add all the neccessary tools to run the project successfully.
+Hi!!! To test this project you will need to have a couple of tools in your system to be able to run the project, use the following steps to add all the neccessary tools to run the project successfully.
 
 ![gif1](https://media.giphy.com/media/T7nPPye9F1fQYdWWUj/giphy.gif)
+
+___
 
 1 - Download and install Elipse IDE: https://www.eclipse.org/downloads/
 
@@ -13,13 +15,13 @@ Hi everyone I hope that everything is goin well!!!! To test this project you wil
 
 4 - Download and install Apache Maven http://maven.apache.org/download.cgi select one of the binary options.
 
-5 - Dowload the Selenium Java Client Driver: https://www.selenium.dev/downloads/ and Unzip the file.
+5 - Download the Selenium Java Client Driver: https://www.selenium.dev/downloads/ and unzip the file.
 
 ![image](https://user-images.githubusercontent.com/59879362/114331901-4aaca380-9b02-11eb-9e65-601245bb6772.png)
 
-6 - Dowload the "AutomationTest" Project from GitHub as .zip file.
+6 - Download the "Automation Test" Project from GitHub as .zip file.
 
-7 - Import the project as "Existing Maven Projects" in the ecplise IDE.
+7 - Import the project as "Existing Maven Project" into eclipse IDE..
 
 8 - Now add the Selenium WebDriver into java Build Path, Using the following steps:
   - Right-click on "Focus Challenge Project" and select Properties.
@@ -38,6 +40,6 @@ Hi everyone I hope that everything is goin well!!!! To test this project you wil
   - Once done, click "Apply and Close" button.
 
    
-9- Finally the end!!!!! Now run the project and hope that everything works as expected....     
- https://media.giphy.com/media/T7nPPye9F1fQYdWWUj/giphy.gif
+9- Finally the process in completed!!!!! Run the project and hope that everything works as expected....     
+ 
 ![gif2](https://media.giphy.com/media/UWse77aqHkxCFEdUPB/giphy.gif)
